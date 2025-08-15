@@ -1,6 +1,7 @@
 import { Grid, Rating, Typography } from "@mui/material";
 import { TMDB_IMAGE_BASE_URL } from "../../../shared/constants";
 import { MovieDetailsAPIResponse } from "../../services/fetchMovieDetails/fetchMovieDetails.stypes";
+import { StyledImage } from "./MovieDetailsContent.style";
 
 function MovieDetailsContent({
   movieDetails,
@@ -134,14 +135,10 @@ function MovieDetailsContent({
           md: 5,
         }}
       >
-        <img
+        <StyledImage
           src={`${TMDB_IMAGE_BASE_URL}/${movieDetails.backdrop_path}`}
-          style={{
-            height: "650px",
-            objectFit: "cover",
-            maxWidth: "100%",
-            borderRadius: "3rem",
-          }}
+          alt={movieDetails.title}
+          loading="lazy"
         />
       </Grid>
     </Grid>

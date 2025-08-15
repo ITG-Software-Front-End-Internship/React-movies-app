@@ -42,6 +42,10 @@ function HeroTrendingMovieSlide({
               size="large"
               startIcon={<SlideshowIcon />}
             >
+              {/**
+               *
+               * TODO: Magic string !!
+               */}
               Watch now !
             </StyledWatchNowButton>
           </TrendingMovieDetailContainer>

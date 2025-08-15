@@ -1,7 +1,7 @@
 import { Navigation, Virtual } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import HeroTrendingMovieSlide from "../heroTrendingMovieSlide/HeroTrendingMovieSlide";
-import "./heroSwiper.module.css";
+import "./HeroSwiper.module.css";
 
 type TrendingMovies = {
   id: number;
@@ -31,11 +31,9 @@ function HeroSwiper({ trendingMovies }: HeroSwiperProps) {
       >
         {trendingMovies.map((movie) => {
           return (
-            <>
-              <SwiperSlide key={movie.id} virtualIndex={movie.id}>
-                <HeroTrendingMovieSlide trendingMovieSlide={movie} />
-              </SwiperSlide>
-            </>
+            <SwiperSlide key={movie.id} virtualIndex={movie.id}>
+              <HeroTrendingMovieSlide trendingMovieSlide={movie} />
+            </SwiperSlide>
           );
         })}
       </Swiper>
